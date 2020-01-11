@@ -1,0 +1,48 @@
+INSERT INTO document_format(document_format_id, document_format, mime_type, extension, document_type_id) 
+VALUES (1,'Email', 'text/html', 'eml',1);
+
+INSERT INTO document_format(document_format_id, document_format, mime_type, extension, document_type_id) 
+VALUES (2,'Microsoft Word', 'application/msword', 'doc',2);
+
+INSERT INTO document_format(document_format_id, document_format, mime_type, extension, document_type_id) 
+VALUES (3,'Microsoft Word (OpenXML)', 'application/vnd.openxmlformats-officedocument.wordprocessingml.document', 'docx',2);
+
+INSERT INTO document_format(document_format_id, document_format, mime_type, extension, document_type_id) 
+VALUES (4,'OpenDocument text document', 'application/vnd.oasis.opendocument.text', 'odt',2);
+
+INSERT INTO document_format(document_format_id, document_format, mime_type, extension, document_type_id) 
+VALUES (5,'Microsoft Excel', 'application/vnd.ms-excel', 'xls',2);
+
+INSERT INTO document_format(document_format_id, document_format, mime_type, extension, document_type_id) 
+VALUES (6,'Microsoft Excel (OpenXML)', 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet', 'xlsx',2);
+
+INSERT INTO document_format(document_format_id, document_format, mime_type, extension, document_type_id) 
+VALUES (7,'OpenDocument spreadsheet document', 'application/vnd.oasis.opendocument.spreadsheet', 'ods',2);
+
+INSERT INTO document_format(document_format_id, document_format, mime_type, extension, document_type_id) 
+VALUES (8,'Microsoft PowerPoint', 'application/vnd.ms-powerpoint', 'ppt',2);
+
+INSERT INTO document_format(document_format_id, document_format, mime_type, extension, document_type_id) 
+VALUES (9,'Microsoft PowerPoint (OpenXML)', 'application/vnd.openxmlformats-officedocument.presentationml.presentation', 'pptx',2);
+
+INSERT INTO document_format(document_format_id, document_format, mime_type, extension, document_type_id) 
+VALUES (10,'OpenDocument presentation document', 'application/vnd.openxmlformats-officedocument.presentationml.presentation', 'odp',2);
+
+INSERT INTO document_format(document_format_id, document_format, mime_type, extension, document_type_id) 
+VALUES (11,'Adobe Portable Document Format', 'application/pdf', 'pdf',3);
+
+INSERT INTO document_format(document_format_id, document_format, mime_type, extension, document_type_id) 
+VALUES (12,'Bitmap', 'image/bmp', 'bmp',4);
+
+INSERT INTO document_format(document_format_id, document_format, mime_type, extension, document_type_id) 
+VALUES (13,'Graphics Interchange Format (GIF)', 'image/gif', 'gif',4);
+
+INSERT INTO document_format(document_format_id, document_format, mime_type, extension, document_type_id) 
+VALUES (14,'Joint Photographic Expert Group (jpeg)', 'image/jpeg', 'jpeg',4);
+
+INSERT INTO document_format(document_format_id, document_format, mime_type, extension, document_type_id) 
+VALUES (15,'Portable Network Graphics (png)', 'image/png', 'png',4);
+
+INSERT INTO document_format(document_format_id, document_format, mime_type, extension, document_type_id) 
+VALUES (16,'Tagged Image File Format (tiff)', 'image/tiff', 'png',4);
+

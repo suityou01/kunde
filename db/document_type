@@ -1,0 +1,4 @@
+INSERT INTO document_type ("document_type_id", "document_type") VALUES (1,'Email');
+INSERT INTO document_type ("document_type_id", "document_type") VALUES (2,'Office Document');
+INSERT INTO document_type ("document_type_id", "document_type") VALUES (3,'Portable document format (pdf)');
+INSERT INTO document_type ("document_type_id", "document_type") VALUES (4,'Computer Image');
