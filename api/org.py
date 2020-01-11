@@ -1,6 +1,4 @@
 import asyncio
-import aiohttp_jinja2
-import jinja2
 from aiohttp import web
 from aiohttp_validate import validate
 import datetime
@@ -16,8 +14,6 @@ delete_org_schema, search_org_schema, new_org_person_schema, remove_org_person_s
 search_org_person_schema, new_org_contact_route_schema, update_org_contact_route_schema, delete_org_contact_route_schema, \
 read_org_contact_route_schema, new_org_address_schema, update_org_address_schema, delete_org_address_schema, read_org_address_schema, \
 new_org_doc_schema, search_org_doc_schema
-
-from pprint import pprint
 import time
 
 #*****************************************************************************************************************************************
