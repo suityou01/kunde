@@ -21,4 +21,6 @@ if __name__ == "__main__":
     loader=jinja2.FileSystemLoader('view'),
     context_processors = [aiohttp_jinja2.request_processor])
 
+    app.router.add_static('/',path='',name='static')
+
     web.run_app(app, port=8085)

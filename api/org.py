@@ -172,7 +172,7 @@ async def upload_document(request):
     username = data['username']
     document_id = data.get('document_id')
     filename, filext = os.path.splitext(document.filename)
-    conn = create_connection(os.path.join(os.path.dirname(__file__), '../db/kunde.db'))
+    conn = model.db.create_connection(os.path.join(os.path.dirname(__file__), '../db/kunde.db'))
     ret = model.document.upload_document(conn, document.file,filename,document.content_type,filext,username, document_id=document_id)
     return web.json_response(ret) 
 
