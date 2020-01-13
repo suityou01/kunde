@@ -31,7 +31,7 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">
+                        <a class="nav-link" href="/controller/mail/">
                             <i class="fa fa-envelope-o">
                                 <span class="badge badge-danger">11</span>
                             </i>
@@ -55,16 +55,19 @@
                             Calendar
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="#">Action</a>
-                            <a class="dropdown-item" href="#">Another action</a>
+                            <a class="dropdown-item" href="#">New Meeting Invite</a>
+                            <a class="dropdown-item" href="#">New Reminder</a>
                             <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="#">Something else here</a>
+                            <a class="dropdown-item" href="#">Day View</a>
+                            <a class="dropdown-item" href="#">3 Day View</a>
+                            <a class="dropdown-item" href="#">Week View</a>
+                            <a class="dropdown-item" href="#">Month View</a>
                         </div>
                     </li>
                 </ul>
                 <ul class="navbar-nav ">
                     <li class="nav-item">
-                        <a class="nav-link" href="#">
+                        <a class="nav-link" href="/controller/alert/">
                             <i class="fa fa-bell">
                                 <span class="badge badge-info">11</span>
                             </i>
@@ -72,7 +75,7 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">
+                        <a class="nav-link" href="/controller/task/">
                             <i class="fa fa-globe">
                                 <span class="badge badge-success">11</span>
                             </i>
@@ -110,10 +113,10 @@
         <div class="container-fluid">
             <div class="row">
                 <a href="/controller/org/"><div class="heading bg-dark">Organisation View</div></a>
-                <div class="heading bg-dark">Person View</div>
-                <div class="heading bg-dark">Opportunities</div>
-                <div class="heading bg-dark">Leads</div>
-                <div class="heading bg-dark">Campaigns</div>
+                <a href="/controller/person/"><div class="heading bg-dark">Person View</div></a>
+                <a href="/controller/opportunity/"><div class="heading bg-dark">Opportunities</div></a>
+                <a href="/controller/lead/"><div class="heading bg-dark">Leads</div></a>
+                <a href="/controller/campaign/"><div class="heading bg-dark">Campaigns</div></a>
             </div>
             {% block body %}{% endblock %}
         </div>
