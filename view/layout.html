@@ -6,6 +6,8 @@
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css">
         <link rel="stylesheet" href="/view/navbar.css">
+        <link rel="stylesheet" href="/view/tabs.css">
+        <link rel="stylesheet" href="/view/styles.css">
         <!--<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">-->
         <!--<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>-->
         <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -14,7 +16,7 @@
     </head>
     <body>
         <nav class="navbar navbar-icon-top navbar-expand-lg navbar-dark bg-dark">
-            <a class="navbar-brand" href="#">Navbar</a>
+            <a class="navbar-brand" href="#">Kunde</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
@@ -33,23 +35,24 @@
                             <i class="fa fa-envelope-o">
                                 <span class="badge badge-danger">11</span>
                             </i>
-                            Link
+                            Mail
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link disabled" href="#">
-                            <i class="fa fa-envelope-o">
+                        <!--<a class="nav-link disabled" href="#">-->
+                        <a class="nav-link" href="#">
+                            <i class="fa fa-hashtag">
                                 <span class="badge badge-warning">11</span>
                             </i>
-                            Disabled
+                            Tweets
                         </a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <i class="fa fa-envelope-o">
+                            <i class="fa fa-calendar-o">
                                 <span class="badge badge-primary">11</span>
                             </i>
-                            Dropdown
+                            Calendar
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <a class="dropdown-item" href="#">Action</a>
@@ -65,7 +68,7 @@
                             <i class="fa fa-bell">
                                 <span class="badge badge-info">11</span>
                             </i>
-                            Test
+                            Alerts
                         </a>
                     </li>
                     <li class="nav-item">
@@ -73,8 +76,29 @@
                             <i class="fa fa-globe">
                                 <span class="badge badge-success">11</span>
                             </i>
-                            Test
+                            Tasks
                         </a>
+                    </li>
+                    <li class="divider-vertical"></li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/controller/settings/">
+                            <i class="fa fa-cog">
+                            </i>
+                            Settings
+                        </a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="fa fa-user">
+                            </i>
+                            User
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="/controller/user/">Profile</a>
+                            <a class="dropdown-item" href="#">Another action</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">Log out</a>
+                        </div>
                     </li>
                 </ul>
                 <form class="form-inline my-2 my-lg-0">
@@ -83,6 +107,15 @@
                 </form>
             </div>
         </nav>
-        {% block body %}{% endblock %}
+        <div class="container-fluid">
+            <div class="row">
+                <a href="/controller/org/"><div class="heading bg-dark">Organisation View</div></a>
+                <div class="heading bg-dark">Person View</div>
+                <div class="heading bg-dark">Opportunities</div>
+                <div class="heading bg-dark">Leads</div>
+                <div class="heading bg-dark">Campaigns</div>
+            </div>
+            {% block body %}{% endblock %}
+        </div>
     </body>
 </html>

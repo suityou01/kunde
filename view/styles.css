@@ -1,0 +1,24 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans);
+
+*
+{
+    font-family: Open Sans;
+}
+
+.row{
+    border-bottom: 2px solid #212529;
+}
+
+.heading {
+    /*background-color: #212529;*/
+    color: white;
+    display: inline-block;
+    font-weight: bold;
+    padding: 7px 30px 7px 15px;
+    font-size: 20px;
+    text-transform: uppercase;
+}
+
+.heading:hover {
+    background-color: darkgray !important;
+}

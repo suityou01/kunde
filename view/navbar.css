@@ -1,3 +1,5 @@
+@import url("//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
+
 .navbar-icon-top .navbar-nav .nav-link > .fa {
     position: relative;
     width: 36px;
@@ -110,4 +112,11 @@
     .navbar-icon-top.navbar-expand-xl .navbar-nav .nav-link > .fa > .badge {
         top: -7px;
     }
+}
+
+.navbar .divider-vertical {
+    margin-top: 14px;
+    height: 24px;
+    border-left: 1px solid #f2f2f2;
+    border-image: linear-gradient(to bottom, gray, rgba(0, 0, 0, 0)) 1 100%;
 }

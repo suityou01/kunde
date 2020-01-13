@@ -1,4 +1,41 @@
 {% extends "layout.html" %}
 {% block body %}
-    <h1>Org Dashboard</h1>
+
+    <div class="worko-tabs">
+        <input class="state" type="radio" title="tab-one" name="tabs-state" id="tab-one" checked />
+        <input class="state" type="radio" title="tab-two" name="tabs-state" id="tab-two" />
+        <input class="state" type="radio" title="tab-three" name="tabs-state" id="tab-three" />
+        <input class="state" type="radio" title="tab-four" name="tabs-state" id="tab-four" />
+
+        <div class="tabs flex-tabs">
+            <label for="tab-one" id="tab-one-label" class="tab">Organisation</label>
+            <label for="tab-two" id="tab-two-label" class="tab">Communication</label>
+            <label for="tab-three" id="tab-three-label" class="tab">Documents</label>
+            <label for="tab-four" id="tab-four-label" class="tab">Change Log</label>
+
+            <div id="tab-one-panel" class="panel active">
+                <!--<section id='sect_company' class="content-section">-->
+                    <div class="container-fluid">
+                        <div class="card bg-light mb-1" >
+                            <div class="card-header bg-primary">Header</div>
+                            <div class="card-body">
+                                <h5 class="card-title">Light card title</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            </div>
+                        </div>
+                    </div>
+                <!--</section>-->
+            </div>
+            <div id="tab-two-panel" class="panel">
+                Tab two content
+            </div>
+            <div id="tab-three-panel" class="panel">
+                Tab three content
+            </div>
+            <div id="tab-four-panel" class="panel">
+                Tab four content
+            </div>
+        </div>
+    </div>
+</div>
 {% endblock %}
