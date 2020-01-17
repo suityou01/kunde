@@ -1,6 +1,7 @@
 from aiohttp import web
 import asyncio
 from api.org import org_app
+from api.document import doc_app
 from controller.org import org_controller
 from controller.settings import settings_controller
 from controller.user import user_controller
@@ -24,6 +25,7 @@ app = web.Application()
 app.add_routes([web.get('/', handle),
                 web.get('/{name}', handle)])
 app.add_subapp('/api/org/', org_app)
+app.add_subapp('/api/document/', doc_app)
 app.add_subapp('/controller/org/', org_controller)
 app.add_subapp('/controller/settings/', settings_controller)
 app.add_subapp('/controller/user/', user_controller)

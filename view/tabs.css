@@ -21,8 +21,8 @@ body {
 }
 
 .worko-tabs {
-  margin: 20px;
-  width: 80%;
+  /*margin: 20px;*/
+  width: 100%;
 }
 .worko-tabs .state {
   position: absolute;

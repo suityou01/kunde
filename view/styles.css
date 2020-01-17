@@ -22,3 +22,20 @@
 .heading:hover {
     background-color: darkgray !important;
 }
+
+.fieldlabel:hover .clipboardicon{
+    color: darkgray !important;
+}
+
+.tooltip {
+    font-size: xx-small !important;
+}
+
+.nopadding {
+    padding: 0 !important;
+    margin: 0 !important;
+ }
+
+ span.active {
+    background-color: #69be28 !important;
+ }
