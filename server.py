@@ -16,13 +16,16 @@ from controller.mail import mail_controller
 from controller.task import task_controller
 import aiohttp_jinja2
 import jinja2
+import json
 from pprint import pprint
 import time
 import threading
 import uuid
 
-def database_event(message):
-    pprint(message)
+async def database_event(event_type, payload):
+    print("DATABASE EVENT RECEIVED")
+    print("EVENT_TYPE %d" % event_type)
+    pprint(payload)
 
 async def handle(request):
     name = request.match_info.get('name', "Anonymous")
@@ -35,8 +38,9 @@ def message_queue_worker():
         asyncio.set_event_loop(loop)
         for m in message_queue:
             try:
-                msg = message_queue[m]
-                loop.run_until_complete(asyncio.ensure_future(message_dispatch[msg[0]](msg[1][1])))
+                msg = json.loads(message_queue[m])
+                pprint(msg)
+                loop.run_until_complete(asyncio.ensure_future(message_dispatch[msg['message']](msg['event_type'],msg['payload'])))
             except Exception as e:
                 print(str(e))
         message_queue.clear()

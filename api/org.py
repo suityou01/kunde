@@ -34,7 +34,7 @@ async def add_org(request, *args):
     conn = model.db.create_connection(os.path.join(os.path.dirname(__file__), '../db/kunde.db'))
     org_id = model.org.create_org(conn,nm,un)
     model.org.add_address(conn,org_id,a1,a2,tn,st,zp,ct,1,un)
-    await args[0].app['pub'].publish_json('system:1', "New Org %s" + str(request))
+    await args[0].app['pub'].publish_json('system:1', json.dumps({"message": "database_event", "event_type" : 1, "payload": request}))
     return web.json_response(org_id)
     
 @validate(request_schema=update_org_schema)
