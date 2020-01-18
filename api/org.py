@@ -1,6 +1,7 @@
 import asyncio
 from aiohttp import web
 from aiohttp_validate import validate
+import aioredis
 import datetime
 import json
 import logging
@@ -33,6 +34,7 @@ async def add_org(request, *args):
     conn = model.db.create_connection(os.path.join(os.path.dirname(__file__), '../db/kunde.db'))
     org_id = model.org.create_org(conn,nm,un)
     model.org.add_address(conn,org_id,a1,a2,tn,st,zp,ct,1,un)
+    await args[0].app['pub'].publish_json('system:1', "New Org %s" + str(request))
     return web.json_response(org_id)
     
 @validate(request_schema=update_org_schema)
@@ -203,13 +205,19 @@ async def read_document(request, *args):
 # App start up code below here only
 #*****************************************************************************************************************************************
 
-async def on_startup(userapi):
+async def on_startup(orgapi):
     #log.info("org sub_app startup")
     print("org sub_app startup")
+    orgapi['pub'] = await aioredis.create_redis('redis://localhost')
     
-async def on_shutdown(userapi):
+async def on_shutdown(orgapi):
     #log.info("org sub_app shutdown")
     print("org sub_app shutdown")
+    try:
+        orgapi['pub'].close()
+    except Exception as e:
+        #log.exception("An exception occured while shutting down user_api app")
+        print("An exception occured while shutting down user_api app")
 
 org_app = web.Application()
 log = logging.getLogger(__name__)
