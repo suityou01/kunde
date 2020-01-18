@@ -39,3 +39,7 @@
  span.active {
     background-color: #69be28 !important;
  }
+
+ .hidden{
+     display: none;
+ }
