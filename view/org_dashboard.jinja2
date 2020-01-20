@@ -497,21 +497,22 @@
                             <form>
                                 <div class="form-group">
                                     <label for="modalOrgTradingName">Trading Name</label>
-                                    <input type="text" class="form-control" id="modalOrgTradingName" placeholder="Trading Name">
+                                    <input type="text" class="form-control" id="modalOrgTradingName" placeholder="Trading Name" required>
                                 </div>
                                 <div class="form-group">
                                     <label for="modalOrgType">Company Type</label>
-                                    <select class="form-control" id="modalOrgType">
-                                    <option>Public Limited Company (Plc)</option>
-                                    <option>Private Limited Company</option>
-                                    <option>Limited Liability Partnershhip (LLP)</option>
-                                    <option>Charity</option>
-                                    <option>Government Organisation</option>
+                                    <select class="form-control" id="modalOrgType" required>
+                                    <option value="">None</option>
+                                    <option value=1>Public Limited Company (Plc)</option>
+                                    <option value=2>Private Limited Company</option>
+                                    <option value=3>Limited Liability Partnershhip (LLP)</option>
+                                    <option value=4>Charity</option>
+                                    <option value=5>Government Organisation</option>
                                     </select>
                                 </div>
                                 <div class="form-group">
                                     <label for="modalOrgAddress1">Address Line 1</label>
-                                    <input type="text" class="form-control" id="modalOrgAddress1" placeholder="Address Line 1">
+                                    <input type="text" class="form-control" id="modalOrgAddress1" placeholder="Address Line 1" required>
                                 </div>
                                 <div class="form-group">
                                     <label for="modalOrgAddress2">Address Line 2</label>
@@ -519,7 +520,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label for="modalOrgTown">Town</label>
-                                    <input type="text" class="form-control" id="modalOrgAddress1" placeholder="Town">
+                                    <input type="text" class="form-control" id="modalOrgAddress1" placeholder="Town" required>
                                 </div>
                                 <div class="form-group">
                                     <label for="modalOrgState">State</label>
@@ -530,6 +531,17 @@
                                     <input type="text" class="form-control" id="modalOrgZip" placeholder="Zip">
                                 </div>
                                 <div class="form-group">
+                                    <label for="modalOrgType">Country</label>
+                                    <select class="form-control" id="modalCountry" required>
+                                    <option value="">None</option>
+                                    <option value=234>United Kingdom</option>
+                                    <option value=1>Afghanistan</option>
+                                    <option value=2>Albania</option>
+                                    <option value=3>American Samoa</option>
+                                    <option value=5>Andorra</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
                                     <label for="modalOrgRegNo">Company Registration Number</label>
                                     <input type="text" class="form-control" id="modalOrgRegNo" placeholder="Company Reg No">
                                 </div>
@@ -537,12 +549,13 @@
                                     <label for="modalOrgPhoneNumber">Phone Number</label>
                                     <input type="text" class="form-control" id="modalOrgPhoneNumber" placeholder="Company Phone Number">
                                 </div>
+                                 <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                                    <button type="submit" class="btn btn-primary">Submit</button>
+                                </div>
                             </form>
                         </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
-                            <button type="button" class="btn btn-primary">Submit</button>
-                        </div>
+                       
                         </div>
                     </div>
                 </div>
@@ -562,21 +575,22 @@
                             <form>
                                 <div class="form-group">
                                     <label for="modalPersonTitle">Title</label>
-                                    <select class="form-control" id="modalPersonTitle">
-                                    <option>Mr</option>
-                                    <option>Mrs</option>
-                                    <option>Ms</option>
-                                    <option>Sir</option>
-                                    <option>Dame</option>
+                                    <select class="form-control" id="modalPersonTitle" required>
+                                        <option value=>None</option>
+                                        <option value=1>Mr</option>
+                                        <option value=2>Mrs</option>
+                                        <option value=3>Ms</option>
+                                        <option value=4>Sir</option>
+                                        <option value=5>Dame</option>
                                     </select>
                                 </div>
                                 <div class="form-group">
                                     <label for="modalPersonFirstName">First Name</label>
-                                    <input type="text" class="form-control" id="modalPersonFirstName" placeholder="First Name">
+                                    <input type="text" class="form-control" id="modalPersonFirstName" placeholder="First Name" required>
                                 </div>
                                 <div class="form-group">
                                     <label for="modalPersonLastName">Last Name</label>
-                                    <input type="text" class="form-control" id="modalPersonLastName" placeholder="Last Name">
+                                    <input type="text" class="form-control" id="modalPersonLastName" placeholder="Last Name" required>
                                 </div>
                                 <div class="form-group">
                                     <label for="modalPersonEmail">Email address</label>

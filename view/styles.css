@@ -43,3 +43,13 @@
  .hidden{
      display: none;
  }
+
+input:optional, select:optional {
+    border-left: 3px solid #999;
+}
+input:required, select:required {
+    border-left: 3px solid palegreen;
+}
+input:invalid, select:invalid {
+    border-left: 3px solid salmon;
+}
